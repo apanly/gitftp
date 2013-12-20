@@ -9,7 +9,6 @@ if __name__ == '__main__':
     files=git.gitstatus()
     gitftp=GITFTP(CONST_HOSTADDR,CONST_USERNAME,CONST_PASSWORD,CONST_PORT)
     gitftp.login()
-    #add files
     addfiles=files['add']
     if addfiles:
         gitftp.upload_files(addfiles)
@@ -20,4 +19,4 @@ if __name__ == '__main__':
     if deletefiles:
         gitftp.delete_files(deletefiles)
     gitftp.close()
-    git.gitsubmit()
+    #git.gitsubmit()

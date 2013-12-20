@@ -5,4 +5,5 @@ CONST_USERNAME='g1307798' # 用户名
 CONST_PASSWORD='TMxsd12s%@1' # 密码
 CONST_PORT=21
 CONST_ROOTPATH='/home/vincent/opensource/simpleenglish/'
+CONT_PATHPREFIX='/'
 CONST_BUFFER_SIZE = 8192

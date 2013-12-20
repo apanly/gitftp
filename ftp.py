@@ -3,7 +3,7 @@
 from ftplib import FTP
 import os
 from functions import debug_print,deal_error,printsep
-from const import CONST_BUFFER_SIZE,CONST_ROOTPATH
+from const import CONST_BUFFER_SIZE,CONST_ROOTPATH,CONT_PATHPREFIX
 class GITFTP:
     def __init__(self, hostaddr, username, password, port=21):
         self.hostaddr = hostaddr
@@ -27,12 +27,13 @@ class GITFTP:
             return
         f = open(filepath, "rb")
         file_name = os.path.split(filepath)[-1]
-        const_path=os.path.dirname(CONST_ROOTPATH)
         ftppath=os.path.dirname(filepath)
-        ftppath=ftppath.replace(const_path,"")
+        ftppath=ftppath.replace(CONST_ROOTPATH,"")
+        ftppath="%s%s"%(CONT_PATHPREFIX,ftppath)
         try:
             self.ftp.cwd(ftppath)
             self.ftp.storbinary('STOR %s'%file_name, f, CONST_BUFFER_SIZE)
+            f.close()
         except Exception:
             return False
         return True
