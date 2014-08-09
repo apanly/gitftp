@@ -1,0 +1,1 @@
+# -*- coding: utf-8 -*-from gittle import Gittleclass Git():    def __init__(self, repo_path):        self.repo = Gittle(repo_path)    def status(self):        modfiles=self.repo.modified_files()        addfiles=self.repo.added_files()        remfiles=self.repo.removed_files()        return {"mod":modfiles,"add":addfiles,"rem":remfiles}

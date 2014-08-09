@@ -1,1 +1,1 @@
-# -*- coding: utf-8 -*-SQLALCHEMY_DATABASE_URI = 'mysql://root:root@localhost:3306/gitftp'SQLALCHEMY_ENCODING = "utf-8"SQLALCHEMY_ECHO = TrueDEBUG = True
+# -*- coding: utf-8 -*-SQLALCHEMY_DATABASE_URI = 'mysql://root:root@localhost:3306/gitftp'SQLALCHEMY_ENCODING = "utf-8"SQLALCHEMY_ECHO = TrueDEBUG = TruePROJECT_STATUS=\{    '0':'入库',    '1':'初始化 git init',    '2':'克隆 git clone',    '3':'可开发'}

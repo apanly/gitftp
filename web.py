@@ -4,6 +4,7 @@ from application import app
 from views import *
 MODULES = (
     (public, ''),
+    (projects, '/projects'),
 )
 
 def setting_modules(app, modules):
