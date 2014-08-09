@@ -1,0 +1,1 @@
+# -*- coding: utf-8 -*-SQLALCHEMY_DATABASE_URI = 'mysql://root:root@localhost:3306/gitftp'SQLALCHEMY_ENCODING = "utf-8"SQLALCHEMY_ECHO = TrueDEBUG = True
