@@ -13,14 +13,14 @@ class Log(db.Model):
     __tablename__ = "log"
 
     id      = Column(Integer, primary_key=True)
-    uid     = Column(Integer,nullable=False,index=True)
-    flag    = Column(SMALLINT,nullable=False,index=True)
+    loginuser = Column(String(20),nullable=False,index=True)
+    flag    = Column(SMALLINT,nullable=False,index=True) #1 profile 2 projects
     content = Column(Text,nullable=False)
     created = Column(TIMESTAMP, nullable=False,server_default='0000-00-00 00:00:00')
     updated = Column(TIMESTAMP, nullable=False,server_default='0000-00-00 00:00:00')
 
-    def __init__(self,uid,flag,content):
-        self.uid=uid
+    def __init__(self,loginuser,flag,content):
+        self.loginuser=loginuser
         self.flag=flag
         self.content=content
         self.created=datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")

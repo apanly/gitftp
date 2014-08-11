@@ -1,1 +1,1 @@
-# -*- coding: utf-8 -*-def repo(id):    pass
+# -*- coding: utf-8 -*-from celery import Celeryfrom application import db,appfrom models.projects import Projectscelery = Celery("gitftp")celery.config_from_object(app.config)@celery.task(ignore_result=True)def repotask(id):    info=Projects.query.filter(Projects.id==id).first()    if info:       from views.git import Git       repo=Git(info.giturl, info.path)       repo.clone()

@@ -1,0 +1,1 @@
+# -*- coding: utf-8 -*-from application import appif __name__ == '__main__':   with app.app_context():       from tasks import celery       celery.worker_main(argv=[''])

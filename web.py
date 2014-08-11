@@ -5,6 +5,8 @@ from views import *
 MODULES = (
     (public, ''),
     (projects, '/projects'),
+    (log, '/log'),
+    (profile, '/profile')
 )
 
 def setting_modules(app, modules):
